@@ -1,0 +1,34 @@
+<view class="container">
+  <image class="img1" src="../../static/Image/index/夏天2.jpg"/>
+  <view class="container2">
+    <image  bindtap="handleChangeAction"
+    wx:if="{{!action}}" src="../../static/Image/index/呼呼动画.gif" mode="widthFix"/>
+    <image wx:else src="../../static/Image/index/呼呼走路动画-单次不循环.gif" mode="widthFix"/>
+  </view>
+  <view class="container4">
+    <image wx:if="{{taskUnfinish}}" src="../../static/Image/index/今日任务处2.png" mode="widthFix" />
+    <image wx:elif="{{taskFinish}}" src="../../static/Image/index/今日任务处1.png" mode="widthFix" />
+  </view>
+    <view class="container6">
+      <image wx:if="{{actiontalk}}" src="../../static/Image/talk/整体4.png" mode="widthFix"/>
+      <image wx:if="{{actiontalk2}}" src="../../static/Image/talk/二次对话框4.png" 
+      bindtap="handleInput"
+      mode="widthFix"/>
+      <image wx:if="{{input}}" src="../../static/Image/index/对话框.png" mode="widthFix" />
+      <input wx:if="{{input}}" type="text" placeholder="请输入你的活动"/>
+    </view>
+    <view class="container7">
+      <image wx:if="{{actiontalk}}" 
+      bindtap="handleChangeTalk"
+      src="../../static/Image/talk/立体可点击对话框.png" mode="widthFix"/>
+      <image wx:if="{{input}}" src="../../static/Image/talk/可点击对话框.png"
+      bindtap="handlepush"
+      mode="widthFix"/>
+    </view>
+
+    <view class="container8">
+      <image 
+      bindtap="handleReturn"
+      src="../../static/Image/xunzhang/返回.png" mode="widthFix"></image>
+    </view>
+</view>

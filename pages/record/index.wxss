@@ -1,0 +1,42 @@
+.backgroundimage{
+  height: 100%;
+}
+.backgroundimage image{
+  height: 100vh;
+  width: 750rpx;
+}
+
+.day1 image{
+  position: absolute;
+  width:80rpx;
+  top: 310rpx;
+  left: 330rpx;
+}
+
+.day2 image{
+  position: absolute;
+  width:80rpx;
+  top: 510rpx;
+  left: 500rpx;
+}
+
+.day3 image{
+  position: absolute;
+  width:80rpx;
+  top: 660rpx;
+  left: 420rpx;
+}
+
+.day4 image{
+  position: absolute;
+  width:80rpx;
+  top: 825rpx;
+  left: 540rpx;
+}
+
+.day5 image{
+  position: absolute;
+  width:80rpx;
+  top: 1050rpx;
+  left: 330rpx;
+}

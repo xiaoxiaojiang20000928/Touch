@@ -1,0 +1,15 @@
+<view class="container">
+  <image class="img1" src="../../static/Image/xunzhang/勋章墙.jpg" mode="widthFix"/>
+  <view class="container2">
+    <image bindtap="handleReturn" src="../../static/Image/xunzhang/返回.png" mode="widthFix"/>
+  </view>
+  <image class="xunzhang1" src="../../static/Image/xunzhang/勋章1.png" 
+  bindtap="tanchuang1open" mode="widthFix"/>
+  <image class="xunzhang2"
+  bindtap="tanchuang2open" src="../../static/Image/xunzhang/勋章2.png" mode="widthFix"/>
+  <view class="container3" bindtap="handleClose">
+    <image wx:if="{{xingdongpai}}" src="../../static/Image/xunzhang/弹窗.png" mode="widthFix"/>
+    <image wx:if="{{nihaopengyou}}" src="../../static/Image/xunzhang/弹窗2.png" mode="widthFix"/>
+  </view>
+  <view class=""></view>
+</view>

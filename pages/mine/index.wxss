@@ -1,0 +1,75 @@
+@import "../../static/font/font.wxss";
+
+.container{
+  display: flex;
+  height: 100%;
+  flex-direction: column;
+}
+
+.topcontainer{
+  background-color: #FDC390;
+  display: flex;
+  height: 280rpx;
+  align-items: center;
+}
+
+.topcontainer text{
+  font-size: 60rpx;
+  margin-left: 20rpx;
+  margin-top: 80rpx;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.topcontainer image{
+  height: 150rpx;
+  width: 150rpx;
+  margin-left: 60rpx;
+  border-radius:50%;
+  margin-top:80rpx
+}
+
+.bottomcontainer{
+  flex: 1;
+}
+
+.bottomcontent{
+  margin-left: 40rpx;
+  margin-top: 50rpx;
+  height: 60rpx;
+  font-size: 32rpx;
+  font-family: DFPShaoNvW5 !important;
+  display: flex;
+}
+
+.wenzi{
+  margin-left: 20rpx;
+}
+.img1{
+  width: 32rpx;
+}
+.img2{
+  width: 32rpx;
+  height: 32rpx;
+  margin-left: 482rpx;
+}
+.img3{
+  width: 32rpx;
+  height: 32rpx;
+  margin-left: 420rpx;
+}
+
+.button_info{
+  width: 400rpx;
+  margin-top: 350rpx;
+  background-color: #FDC390;
+  font-family: DFPShaoNvW5 !important;
+}
+.feedback{
+  width: 400rpx;
+  margin-top: 30rpx;
+  background-color:#FDC390;
+  font-family: DFPShaoNvW5 !important;
+}
+
+
+

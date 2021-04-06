@@ -1,0 +1,36 @@
+{
+  "setting": {},
+  "condition": {
+    "plugin": {
+      "list": []
+    },
+    "game": {
+      "list": []
+    },
+    "gamePlugin": {
+      "list": []
+    },
+    "miniprogram": {
+      "list": [
+        {
+          "name": "pages/medal/index",
+          "pathName": "pages/medal/index",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "pages/help/index",
+          "pathName": "pages/help/index",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "pages/medal/index",
+          "pathName": "pages/medal/index",
+          "query": "",
+          "scene": null
+        }
+      ]
+    }
+  }
+}

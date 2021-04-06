@@ -1,0 +1,29 @@
+// pages/medal/index.js
+Page({
+  data:{
+    xingdongpai:false,
+    nihaopengyou:false,
+    state:null
+  },
+  handleClose(){
+    this.setData({
+      xingdongpai:false,
+      nihaopengyou:false
+    })
+  },
+  tanchuang1open(){
+    this.setData({
+      xingdongpai:true
+    })
+  },
+  tanchuang2open(){
+    this.setData({
+      nihaopengyou:true
+    })
+  },
+  handleReturn(){
+    wx.switchTab({
+      url: '/pages/day1/index',
+    })
+  }
+})

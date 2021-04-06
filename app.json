@@ -1,0 +1,42 @@
+{
+  "pages": [
+    "pages/day1/index",
+    "pages/day2/index",
+    "pages/day3/index",
+    "pages/day4/index",
+    "pages/day5/index",
+    "pages/record/index",
+    "pages/mine/index",
+    "pages/help/index",
+    "pages/aboutus/index",
+    "pages/medal/index"
+  ],
+  "window": {
+    "navigationStyle": "custom"
+  },
+  "tabBar": {
+    "backgroundColor": "#AEEEEE",
+    "selectedColor": "#000000",
+    "list": [
+      {
+        "pagePath": "pages/day1/index",
+        "text": "首页",
+        "iconPath": "./static/Image/tabbar/1.png",
+        "selectedIconPath": "./static/Image/tabbar/4.png"
+      },
+      {
+        "pagePath": "pages/record/index",
+        "text": "记录",
+        "iconPath": "./static/Image/tabbar/2.png",
+        "selectedIconPath": "./static/Image/tabbar/5.png"
+      },
+      {
+        "pagePath": "pages/mine/index",
+        "text": "我的",
+        "iconPath": "./static/Image/tabbar/3.png",
+        "selectedIconPath": "./static/Image/tabbar/6.png"
+      }
+    ]
+  },
+  "sitemapLocation": "sitemap3.json"
+}

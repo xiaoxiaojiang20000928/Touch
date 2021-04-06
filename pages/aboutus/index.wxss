@@ -1,0 +1,27 @@
+.container{
+  height: 100%;
+  background-color:#F2FAF9;
+  display: flex;
+  justify-content: center;
+}
+
+.content{
+  display: flex;
+  margin-top: 120rpx;
+  background-color:white;
+  width: 700rpx;
+  height: 600rpx;
+}
+
+.content image{
+  margin:48rpx;
+}
+
+.content1{
+  position: absolute;
+  left: 30rpx;
+  top: 62rpx;
+}
+.content1 image{
+  width: 35rpx;
+}

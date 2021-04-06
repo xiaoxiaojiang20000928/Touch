@@ -1,0 +1,30 @@
+<view class="container">
+  <view class="topcontainer">
+    <image src="{{userInfo.url}}" mode="widthFix"/>
+    <text>{{userInfo.userName}}</text>
+  </view>
+  <view class="bottomcontainer">
+
+    <view class="bottomcontent">
+    <navigator url="../help/index">
+    <image mode="widthFix" class="img1" src="../../static/Image/mine/资源 7.png"/>
+    <text class="wenzi">帮助</text>
+    <image class="img2" src="../../static/Image/mine/我的_前进图标.png"/>
+    </navigator>
+    </view>
+
+    <navigator url="../aboutus/index">
+    <view class="bottomcontent">
+    <image mode="widthFix" class="img1" src="../../static/Image/mine/资源 5.png"/>
+    <text class="wenzi">关于我们</text>
+    <image class="img3" src="../../static/Image/mine/我的_前进图标.png"/>
+    </view>
+    </navigator>
+
+    <button open-type="getUserInfo" 
+    bindgetuserinfo="getUserInfo"
+    class="button_info">点击授权</button>
+    <button class="feedback" 
+    open-type="feedback">点击反馈</button>
+  </view>
+</view>

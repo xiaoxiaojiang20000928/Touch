@@ -1,0 +1,34 @@
+<!--pages/record/index.wxml-->
+<view class="backgroundimage">
+  <image src="../../static/Image/record/background.jpg"/>
+  <view class="day1">
+  <navigator url="/pages/day1/index" open-type="switchTab">
+  <image wx:if="{{!status1}}" src="../../static/Image/record/unfinish.png" mode="widthFix"/>
+  <image wx:else src="../../static/Image/record/已完成.png" mode="widthFix"/>
+  </navigator>
+  </view>
+  <view class="day2">
+    <navigator url="/pages/day2/index">
+    <image wx:if="{{!status2}}" src="../../static/Image/record/02.png" mode="widthFix"/>
+    <image wx:else src="../../static/Image/record/2.png" mode="widthFix"/>
+    </navigator>
+  </view>
+  <view class="day3">
+    <navigator url="/pages/day3/index">
+    <image wx:if="{{!status3}}" src="../../static/Image/record/03.png" mode="widthFix"/>
+    <image wx:else src="../../static/Image/record/3.png" mode="widthFix"/>
+   </navigator>
+  </view>
+  <view class="day4">
+    <navigator url="/pages/day4/index">
+    <image wx:if="{{!status4}}" src="../../static/Image/record/04.png" mode="widthFix"/>
+    <image wx:else src="../../static/Image/record/4.png" mode="widthFix"/>
+    </navigator>
+  </view>
+  <view class="day5">
+    <navigator url="/pages/day5/index">
+    <image wx:if="{{!status5}}" src="../../static/Image/record/05.png" mode="widthFix"/>
+    <image wx:else src="../../static/Image/record/5.png" mode="widthFix"/>
+    </navigator>
+  </view>
+</view>
