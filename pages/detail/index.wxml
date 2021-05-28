@@ -1,0 +1,8 @@
+<view class="container" wx:if="{{backgroundURL!==null}}" style="height:100vh;background-size:cover;background-image:url({{backgroundURL}})">
+ <view class="contentcontainer">
+  <image class="huhu" src="{{action}}" mode="widthFix"/>
+  <view class="talk">
+    <textarea class="text1">{{message}}</textarea>
+  </view>
+ </view>
+</view>

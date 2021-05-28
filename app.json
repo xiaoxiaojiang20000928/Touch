@@ -1,25 +1,25 @@
 {
   "pages": [
-    "pages/day1/index",
-    "pages/day2/index",
-    "pages/day3/index",
-    "pages/day4/index",
-    "pages/day5/index",
+    "pages/day/index",
     "pages/record/index",
     "pages/mine/index",
     "pages/help/index",
     "pages/aboutus/index",
-    "pages/medal/index"
+    "pages/medal/index",
+    "pages/detail/index",
+    "pages/message/index",
+    "pages/tree/index"
   ],
   "window": {
-    "navigationStyle": "custom"
+    "navigationBarTitleText": "小程序",
+    "navigationBarBackgroundColor": "#FFE0AA"
   },
   "tabBar": {
-    "backgroundColor": "#AEEEEE",
+    "backgroundColor": "#FFE0AA",
     "selectedColor": "#000000",
     "list": [
       {
-        "pagePath": "pages/day1/index",
+        "pagePath": "pages/day/index",
         "text": "首页",
         "iconPath": "./static/Image/tabbar/1.png",
         "selectedIconPath": "./static/Image/tabbar/4.png"
@@ -31,6 +31,12 @@
         "selectedIconPath": "./static/Image/tabbar/5.png"
       },
       {
+        "pagePath": "pages/tree/index",
+        "text": "树洞",
+        "iconPath": "./static/Image/tabbar/tree.png",
+        "selectedIconPath": "./static/Image/tabbar/selectedtree.png"
+      },
+      {
         "pagePath": "pages/mine/index",
         "text": "我的",
         "iconPath": "./static/Image/tabbar/3.png",
@@ -38,5 +44,5 @@
       }
     ]
   },
-  "sitemapLocation": "sitemap3.json"
+  "sitemapLocation": "sitemap9.json"
 }

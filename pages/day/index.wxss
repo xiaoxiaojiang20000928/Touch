@@ -1,0 +1,55 @@
+.contentcontainer {
+  position: relative;
+  height: 800rpx;
+  width: 800rpx;
+  font-family: 'haibao';
+}
+.contentcontainer .huhu1 {
+  position: absolute;
+  top: 600rpx;
+  left: 100rpx;
+  width: 300px;
+}
+.contentcontainer .huhu2 {
+  position: absolute;
+  width: 350rpx;
+  top: 700rpx;
+  left: 30rpx;
+}
+.contentcontainer .huhu3 {
+  position: absolute;
+  top: 400rpx;
+  left: 80rpx;
+}
+.talk {
+  position: absolute;
+  top: 550rpx;
+  left: 300rpx;
+  width: 400rpx;
+  height: 222rpx;
+  background-image: url("https://www.yymlcy.cn/imgs/talk.png");
+  background-size: cover;
+}
+.talk text {
+  display: block;
+  padding-left: 23rpx;
+  font-size: 26rpx;
+  padding-top: 20rpx;
+}
+.talk .input1 {
+  margin: 20rpx auto 0 auto;
+  height: 160rpx;
+  width: 350rpx;
+}
+.answer {
+  position: absolute;
+  width: 300rpx;
+  top: 880rpx;
+  left: 350rpx;
+}
+.medal {
+  position: absolute;
+  width: 80rpx;
+  top: 10rpx;
+  left: 35rpx;
+}

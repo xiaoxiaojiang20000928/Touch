@@ -1,42 +1,64 @@
-.backgroundimage{
-  height: 100%;
+.container {
+  width: 100%;
+  height: 2200rpx;
+  background-image: url("http://1.116.141.149/imgs/background.png");
+  background-size: 100%;
 }
-.backgroundimage image{
-  height: 100vh;
-  width: 750rpx;
+.container .contentcontainer {
+  position: relative;
+  width: 600rpx;
+  height: 600rpx;
 }
-
-.day1 image{
+.day {
+  width: 100rpx;
+}
+.one {
   position: absolute;
-  width:80rpx;
-  top: 310rpx;
-  left: 330rpx;
+  top: 180rpx;
+  left: 380rpx;
 }
-
-.day2 image{
+.two {
   position: absolute;
-  width:80rpx;
-  top: 510rpx;
+  top: 380rpx;
+  left: 340rpx;
+}
+.three {
+  position: absolute;
+  top: 580rpx;
+  left: 340rpx;
+}
+.four {
+  position: absolute;
+  top: 700rpx;
+  left: 520rpx;
+}
+.five {
+  position: absolute;
+  top: 880rpx;
+  left: 300rpx;
+}
+.six {
+  position: absolute;
+  top: 1150rpx;
+  left: 220rpx;
+}
+.seven {
+  position: absolute;
+  top: 1280rpx;
+  left: 480rpx;
+}
+.eight {
+  position: absolute;
+  top: 1500rpx;
+  left: 300rpx;
+}
+.nine {
+  position: absolute;
+  top: 1800rpx;
+  left: 300rpx;
+}
+.ten {
+  position: absolute;
+  top: 2000rpx;
   left: 500rpx;
-}
-
-.day3 image{
-  position: absolute;
-  width:80rpx;
-  top: 660rpx;
-  left: 420rpx;
-}
-
-.day4 image{
-  position: absolute;
-  width:80rpx;
-  top: 825rpx;
-  left: 540rpx;
-}
-
-.day5 image{
-  position: absolute;
-  width:80rpx;
-  top: 1050rpx;
-  left: 330rpx;
 }

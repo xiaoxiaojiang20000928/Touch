@@ -1,0 +1,27 @@
+<view wx:if="{{backgroundURL!==null}}" style="height:100vh;background-size:cover;background-image:url({{backgroundURL}})">
+  <view class="contentcontainer" bindtap="handleClick">
+    <!-- 呼呼动画特效区 -->
+    <image class="huhu1" src="{{action1URL}}" id="static" wx:if="{{static}}" mode="widthFix"/>
+    <image class="huhu2" src="{{action2URL}}" wx:if="{{action}}" mode="widthFix"/>
+    <image class="huhu3" src="/static/Image/index/action3.gif" wx:if="{{action2}}" mode="widthFix"/>
+
+    <!-- 回答区 -->
+    <image class="answer" id="answer1" wx:if="{{talk1}}" mode="widthFix" src="/static/Image/talk/answer1.png"/> 
+    <image class="answer" id="answer2" wx:if="{{upload}}" mode="widthFix" src="/static/Image/talk/answer2.png"/>
+
+    <!-- 聊天框 -->
+    <view class="talk" wx:if="{{talk1}}"><text>{{pre_message}}</text></view>
+
+    <view class="talk" wx:if="{{talk2}}" id="talk2">
+    <text id="talk2">{{last_message}}</text>
+    <text id="talk2">（点击输入您的活动）</text>
+    </view>
+
+    <view class="talk" wx:if="{{input}}">
+      <textarea class="input1" bindinput="handleInput" value="{{input_value}}"></textarea>
+    </view>
+
+    <!-- 徽章区 -->
+    <image src="/static/Image/index/medal.png" class="medal" id="medal" mode="widthFix"/>
+  </view>
+</view>

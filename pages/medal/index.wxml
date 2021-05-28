@@ -1,15 +1,15 @@
 <view class="container">
-  <image class="img1" src="../../static/Image/xunzhang/勋章墙.jpg" mode="widthFix"/>
-  <view class="container2">
-    <image bindtap="handleReturn" src="../../static/Image/xunzhang/返回.png" mode="widthFix"/>
+  <view class="contentcontainer" bindtap="handleClick">
+  <image class="flag" src="../../static/Image/xunzhang/flag.png" mode="widthFix"/>
+  <view  class="firstcontainer">
+  <image id="2" class="medal one" src="../../static/Image/xunzhang/4.png" mode="widthFix"/>
+  <image id="6" class="medal two" src="../../static/Image/xunzhang/1.png" mode="widthFix"/>
+  <image id="3" class="medal three" src="../../static/Image/xunzhang/2.png" mode="widthFix"/>
   </view>
-  <image class="xunzhang1" src="../../static/Image/xunzhang/勋章1.png" 
-  bindtap="tanchuang1open" mode="widthFix"/>
-  <image class="xunzhang2"
-  bindtap="tanchuang2open" src="../../static/Image/xunzhang/勋章2.png" mode="widthFix"/>
-  <view class="container3" bindtap="handleClose">
-    <image wx:if="{{xingdongpai}}" src="../../static/Image/xunzhang/弹窗.png" mode="widthFix"/>
-    <image wx:if="{{nihaopengyou}}" src="../../static/Image/xunzhang/弹窗2.png" mode="widthFix"/>
+  <view  class="secondcontainer">
+  <image id="1" class="medal four" src="../../static/Image/xunzhang/3.png" mode="widthFix"/>
+  <image id="4" class="medal five" src="../../static/Image/xunzhang/5.png" mode="widthFix"/>
+  <image id="5" class="medal six" src="../../static/Image/xunzhang/6.png" mode="widthFix"/>
   </view>
-  <view class=""></view>
+</view>
 </view>

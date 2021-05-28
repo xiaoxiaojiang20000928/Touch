@@ -1,0 +1,41 @@
+.container{
+    height:100vh;
+    background-image: url("https://www.yymlcy.cn/imgs/medal_background.jpg");
+    background-size: contain;
+}
+
+.contentcontainer{
+    width: 600rpx;
+    height: 600rpx;
+    position: relative;
+    .flag{
+        position: absolute;
+        width: 100vw;
+        z-index: 1;
+    }
+}
+
+.firstcontainer{
+    width: 90vw;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    position: absolute;
+    top: 180rpx;
+    left: 35rpx;
+    z-index: 2;
+}
+.secondcontainer{
+    display: flex;
+    position: absolute;
+    justify-content: space-around;
+    align-items: center;
+    width: 90vw;
+    top: 480rpx;
+    z-index: 2;
+    left: 35rpx;
+}
+
+.medal{
+    width: 160rpx;
+}

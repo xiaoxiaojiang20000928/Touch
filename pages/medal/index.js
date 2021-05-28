@@ -1,29 +1,23 @@
 // pages/medal/index.js
+import {sendAction} from '../util/index'
+var app = getApp()
 Page({
   data:{
-    xingdongpai:false,
-    nihaopengyou:false,
-    state:null
+    medal:false
   },
-  handleClose(){
-    this.setData({
-      xingdongpai:false,
-      nihaopengyou:false
-    })
+  async onShow(){
+    const res = await sendAction("/badge/getBadges",{
+      openid:app.openid
+    },"POST")
   },
-  tanchuang1open(){
-    this.setData({
-      xingdongpai:true
-    })
+
+  handleClick(e){
+    const {id} = e.target;
+    this.getMedal(id)
   },
-  tanchuang2open(){
-    this.setData({
-      nihaopengyou:true
-    })
-  },
-  handleReturn(){
-    wx.switchTab({
-      url: '/pages/day1/index',
-    })
+
+  async getMedal(id){
+    const res = await sendAction("/badge/getBadgeAll",{badge:id},"GET");
+    console.log(res);
   }
 })

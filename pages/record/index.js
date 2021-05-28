@@ -1,62 +1,70 @@
 // pages/record/index.js
+var app = getApp()
+import {sendAction} from '../util/index'
 Page({
 
   /**
    * 页面的初始数据
    */
   data: {
-    status1:false,
-    status2:false,
-    status3:false,
-    status4:false,
-    status5:false
+    day1:false,
+    day2:false,
+    day3:false,
+    day4:false,
+    day5:false,
+    day6:false,
+    day7:false,
+    day8:false,
+    day9:false,
+    day10:false,
   },
 
   /**
    * 生命周期函数--监听页面加载
    */
-  onShow: function (options) {
-    wx.getStorage({
-      key: 'day1',
-      success:()=>{
-        this.setData({
-          status1:true
-        })
-      }
+  onLoad(){
+
+  },
+
+  handleClick(e){
+    if(e.target.id){
+    wx.navigateTo({
+      url: `/pages/detail/index?day=${e.target.id}`,
     })
-    wx.getStorage({
-      key: 'day2',
-      success:()=>{
-        this.setData({
-          status2:true
-        })
-      }
-    })
-    wx.getStorage({
-      key: 'day3',
-      success:()=>{
-        this.setData({
-          status3:true
-        })
-      }
-    })
-    wx.getStorage({
-      key: 'day4',
-      success:()=>{
-        this.setData({
-          status4:true
-        })
-      }
-    })
-    wx.getStorage({
-      key: 'day5',
-      success:()=>{
-        this.setData({
-          status5:true
-        })
-      }
+  }
+  },
+
+  async getDay(){
+    const res = await sendAction("/day/record",{
+      openid:app.openid
+    },"POST")
+    this.setData({
+      day1:res.data.day1,
+      day2:res.data.day2,
+      day3:res.data.day3,
+      day4:res.data.day4,
+      day5:res.data.day5,
+      day6:res.data.day6,
+      day7:res.data.day7,
+      day8:res.data.day8,
+      day9:res.data.day9,
+      day10:res.data.day10,
     })
   },
+  /**
+   * 生命周期函数--监听页面初次渲染完成
+   */
+  onReady: function () {
+
+  },
+
+  /**
+   * 生命周期函数--监听页面显示
+   */
+  onShow: function () {
+    this.getDay()
+  },
+
   /**
    * 生命周期函数--监听页面隐藏
    */

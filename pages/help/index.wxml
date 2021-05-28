@@ -1,10 +1,5 @@
 <view class="container">
   <view class="content">
-    <image src="../../static/Image/help/文字.png" mode="widthFix"></image>
-  </view>
-  <view class="content1">
-    <image
-    bindtap="handleReturn" 
-    src="../../static/Image/xunzhang/返回.png" mode="widthFix" />
+    <image src="../../static/Image/help/help.png" mode="widthFix"/>
   </view>
 </view>

@@ -1,27 +1,17 @@
-.container{
-  height: 100%;
-  background-color:#F2FAF9;
+.container {
+  height: 100vh;
+  background-color: #F2FAF9;
   display: flex;
-  justify-content: center;
+  flex-direction: column;
 }
-
-.content{
-  display: flex;
-  margin-top: 120rpx;
-  background-color:white;
-  width: 700rpx;
-  height: 600rpx;
+.content {
+  width: 94%;
+  margin: 80rpx auto 0 auto;
+  background-color: white;
+  padding: 120rpx 0 480rpx 0;
 }
-
-.content image{
-  margin:48rpx;
-}
-
-.content1{
-  position: absolute;
-  left: 30rpx;
-  top: 62rpx;
-}
-.content1 image{
-  width: 35rpx;
+.content image {
+  display: block;
+  margin: 0 auto 0 auto;
+  width: 620rpx;
 }
