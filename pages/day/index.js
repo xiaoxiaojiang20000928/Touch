@@ -14,7 +14,8 @@ Page({
     last_message:null, //二次对话值
     action1URL:null, //呼呼吃饭动画URL
     action2URL:null, //呼呼走路动画URL
-    backgroundURL:null  //背景URL
+    backgroundURL:null,  //背景URL
+    blindbox:null //盲盒动效控制
   },
 
   onLoad(){
@@ -44,20 +45,27 @@ Page({
   async getOpenid(code){
 
     const res = await sendAction("/user/login",{code:code},"POST");
+    app.first=res.data.first;
     app.openid=res.data.openid;
     this.getDay(res.data.openid);
+    if(app.first==true){
+      wx.navigateTo({
+        url: '/pages/firsthelp/index',
+      })
+    }
   },
 
   async getDay(openid){
     const res = await sendAction("/day/getUser_Day",{openid:openid},"POST")
     console.log('1111',res);
-    app.day=res.data.user_day;
+    app.day=res.data.user_day+1;
     this.setData({
       pre_message:res.data.pre_message,
       last_message:res.data.last_message,
       action1URL:res.data.action1,
       action2URL:res.data.action2,
-      backgroundURL:res.data.background
+      backgroundURL:res.data.background,
+      blindbox:app.day
     })
   },
 
@@ -109,6 +117,11 @@ Page({
     if(id=="medal"){
       wx.navigateTo({
         url: '/pages/medal/index'
+      })
+    }
+    if(id=="blindbox"){
+      this.setData({
+        blindbox:null  
       })
     }
   },

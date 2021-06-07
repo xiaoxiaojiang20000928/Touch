@@ -1,0 +1,119 @@
+.container{
+    height: 100vh;
+    background-image: url("https://www.yymlcy.cn/imgs/spring.png");
+    background-size: cover;
+    &_postion{
+        width: 100rpx;
+        height: 100rpx;
+        position: relative;
+        &_1{
+            width: 150rpx;
+            position: absolute;
+            left: 500rpx;
+            top: 960%;
+            z-index: 1;
+        }
+        &_2{
+            width: 60rpx;
+            position: absolute;
+            left: 20rpx;
+            top: 30rpx;
+        }
+    }
+}
+
+
+//记录页
+.contentcontainer{
+    font-family: 'haibao';
+    margin: 60rpx auto 0 auto;
+    width: 92%;
+    height: /* 70%; */1030rpx;
+    padding: 60rpx 0 60rpx 0;
+    background-color: #F3FFE7;
+    overflow: auto;
+    color: #513530;
+    &_one{
+        display: flex;
+        margin-top: 8rpx;
+        align-items: center;
+        &_photo{
+            width: 120rpx;
+            padding-left: 20rpx;
+        }
+        &_text{
+            padding-left: 80rpx;
+            flex: 1;
+        }
+        &_delete{
+            width: 50rpx;
+            padding-right: 10rpx;
+        }
+    }
+    &_item{
+        padding: 0 20rpx 0 20rpx;
+        display: flex;
+        justify-content: space-around;
+        flex-direction: column;
+        margin: 30rpx 0 30rpx 0;
+        height: 120rpx;
+        background-color: #F3FFE7;
+        border-radius: 20rpx;
+        &_time{
+            font-size: 28rpx;
+            font-weight: bold;
+        }
+    }
+}
+
+//编辑页
+.contentcontainer2{
+    font-family: 'haibao';
+    margin: -10rpx auto 0 auto;
+    display: flex;
+    height: 1178rpx;
+    width: 660rpx;
+    flex-direction: column;
+    align-items: center;
+    background-image: url("https://www.yymlcy.cn/imgs/tree_background.png");
+    background-size: 100%;
+    padding:20rpx;
+    background-repeat: no-repeat;
+    color: #513530;
+    >view{
+        display: flex;
+        margin-top: 100rpx;
+        padding-left: 30rpx;
+        width: 100%;
+        height: 350rpx;
+    }
+    &_item1{
+        font-size: 40rpx;
+        font-weight: bold;
+        flex: 1;
+        margin-top: -50rpx;
+    }
+    &_item2{
+        flex: 4;
+        display: flex;
+        flex-wrap: wrap;
+        margin-top: 20rpx;
+        image{
+            width:120rpx;
+            margin: 10rpx;
+        }
+        .cover{
+            border: 2rpx solid gray;
+        }
+    }
+    &_item3{
+        background-image: url("https://www.yymlcy.cn/imgs/treetalk.png");
+        flex: 4;
+        margin-top: 20rpx;
+        margin-right: 18rpx;
+        padding: 10rpx;
+    }
+    .add{
+        margin-top: 120rpx;
+    }
+}

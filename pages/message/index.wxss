@@ -8,13 +8,14 @@
 }
 .contentcontainer {
   width: 92%;
-  margin-top: 100rpx;
+  margin-top: 62rpx;
   background-color: white;
 }
 .contentcontainer image {
   width: 100%;
 }
 .contentcontainer_item {
+  color: #513530;
   font-family: 'haibao';
   width: 100%;
   display: flex;

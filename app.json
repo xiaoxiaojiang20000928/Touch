@@ -8,7 +8,8 @@
     "pages/medal/index",
     "pages/detail/index",
     "pages/message/index",
-    "pages/tree/index"
+    "pages/tree/index",
+    "pages/firsthelp/index"
   ],
   "window": {
     "navigationBarTitleText": "小程序",
@@ -16,7 +17,8 @@
   },
   "tabBar": {
     "backgroundColor": "#FFE0AA",
-    "selectedColor": "#000000",
+    "color": "#513530",
+    "selectedColor": "#513530",
     "list": [
       {
         "pagePath": "pages/day/index",

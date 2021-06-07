@@ -19,7 +19,13 @@
 
     <view class="talk" wx:if="{{input}}">
       <textarea class="input1" bindinput="handleInput" value="{{input_value}}"></textarea>
+      <image class="photo" src="../../static/Image/talk/photo.png" mode="widthFix" />
     </view>
+
+    <!-- 盲盒区 -->
+    <image id="blindbox" wx:if="{{blindbox==3}}" class="blindbox" src="../../static/Image/index/blindbox1.gif" mode="widthFix"/>
+    <image id="blindbox" wx:if="{{blindbox==6}}" class="blindbox" src="../../static/Image/index/blindbox2.gif" mode="widthFix"/>
+    <image id="blindbox" wx:if="{{blindbox==9}}" class="blindbox" src="../../static/Image/index/blindbox3.gif" mode="widthFix"/>
 
     <!-- 徽章区 -->
     <image src="/static/Image/index/medal.png" class="medal" id="medal" mode="widthFix"/>

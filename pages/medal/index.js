@@ -3,7 +3,10 @@ import {sendAction} from '../util/index'
 var app = getApp()
 Page({
   data:{
-    medal:false
+    goal:null,
+    description:null,
+    title:null,
+    state:false
   },
   async onShow(){
     const res = await sendAction("/badge/getBadges",{
@@ -11,13 +14,28 @@ Page({
     },"POST")
   },
 
-  handleClick(e){
+  handleClick(e){ //事件委托
+    if(e.target.id){
     const {id} = e.target;
-    this.getMedal(id)
+    const {name} = e.target.dataset;
+    this.getMedal(id,name)
+    }
+
   },
 
-  async getMedal(id){
+  handleClickDetail(){ //控制勋章弹窗
+    this.setData({
+      state:false
+    })
+  },
+
+  async getMedal(id,name){
     const res = await sendAction("/badge/getBadgeAll",{badge:id},"GET");
-    console.log(res);
+    this.setData({
+      goal:res.data.goal,
+      description:res.data.description,
+      title:name,
+      state:true
+    })
   }
 })

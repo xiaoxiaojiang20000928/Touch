@@ -12,6 +12,8 @@ Page({
   },
 
   getUserInfo(res){
+    wx.setStorageSync('userName', res.detail.userInfo.nickName);
+    wx.setStorageSync('url', res.detail.userInfo.avatarUrl);
     this.setData({
       userInfo:{
         userName:res.detail.userInfo.nickName,
@@ -39,24 +41,19 @@ Page({
   },
 
   onShow: function (options) {
-    wx.getSetting({
-      success:(res)=>{
-        if(res.authSetting['scope.userInfo']){
-          wx.getUserInfo({
-            success:(res)=>{
-              this.setData({
-                userInfo:{
-                  userName:res.userInfo.nickName,
-                  url:res.userInfo.avatarUrl
-                }
-              })
-            },
-            fail:(err)=>{
-              console.log(err)
-            }
-          })
-        }
+    try{
+      const name = wx.getStorageSync('userName');
+      const url = wx.getStorageSync('url');
+      if(name){
+        this.setData({
+          userInfo:{
+            userName:name,
+            url:url
+          }
+        })
       }
-    })
+    }catch(err){
+      console.log(err);
+    }
   }
 })

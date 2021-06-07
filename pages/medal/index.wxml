@@ -1,15 +1,30 @@
 <view class="container">
   <view class="contentcontainer" bindtap="handleClick">
   <image class="flag" src="../../static/Image/xunzhang/flag.png" mode="widthFix"/>
-  <view  class="firstcontainer">
-  <image id="2" class="medal one" src="../../static/Image/xunzhang/4.png" mode="widthFix"/>
-  <image id="6" class="medal two" src="../../static/Image/xunzhang/1.png" mode="widthFix"/>
-  <image id="3" class="medal three" src="../../static/Image/xunzhang/2.png" mode="widthFix"/>
+  <view  class="firstcontainer"> <!-- 第一排勋章 -->
+  <image id="2" data-name="自信行动派" class="medal one" src="../../static/Image/xunzhang/4.png" mode="widthFix"/>
+  <image id="6" data-name="社交达人" class="medal two" src="../../static/Image/xunzhang/1.png" mode="widthFix"/>
+  <image id="3" data-name="精致达人" class="medal three" src="../../static/Image/xunzhang/2.png" mode="widthFix"/>
   </view>
-  <view  class="secondcontainer">
-  <image id="1" class="medal four" src="../../static/Image/xunzhang/3.png" mode="widthFix"/>
-  <image id="4" class="medal five" src="../../static/Image/xunzhang/5.png" mode="widthFix"/>
-  <image id="5" class="medal six" src="../../static/Image/xunzhang/6.png" mode="widthFix"/>
+  <view  class="secondcontainer"> <!-- 第二排勋章 -->
+  <image id="1" data-name="你好朋友" class="medal four" src="../../static/Image/xunzhang/3.png" mode="widthFix"/>
+  <image id="4" data-name="尬聊高手" class="medal five" src="../../static/Image/xunzhang/5.png" mode="widthFix"/>
+  <image id="5" data-name="为你点赞" class="medal six" src="../../static/Image/xunzhang/6.png" mode="widthFix"/>
   </view>
+
+  <view wx:if="{{state}}" catchtap="handleClickDetail" class="message"> <!-- 勋章描述页 -->
+    <view class="title">{{title}}</view>
+
+    <view class="description">
+      <span class="text1">描述：</span>
+      <text>{{description}}</text>
+    </view>
+
+    <view class="goal">
+      <span class="text1">达成条件：</span>
+      <text>{{goal}}</text>
+    </view>
+    </view>
+
 </view>
 </view>

@@ -1,0 +1,10 @@
+<view class="container" bindtap="handleClick">
+  <image wx:if="{{photo=='1'}}" id="1" src="https://www.yymlcy.cn/imgs/help1.png" mode="widthFix" />
+  <image wx:if="{{photo=='2'}}" id="2" src="https://www.yymlcy.cn/imgs/help2.png" mode="widthFix" />
+  <image wx:if="{{photo=='3'}}" id="3" src="https://www.yymlcy.cn/imgs/help3.png" mode="widthFix" />
+  <image wx:if="{{photo=='4'}}" id="4" src="https://www.yymlcy.cn/imgs/help4.png" mode="widthFix" />
+  <image wx:if="{{photo=='5'}}" id="5" src="https://www.yymlcy.cn/imgs/help5.png" mode="widthFix" />
+  <image wx:if="{{photo=='6'}}" id="6" src="https://www.yymlcy.cn/imgs/help6.png" mode="widthFix" />
+  <image wx:if="{{photo=='7'}}" id="7" src="https://www.yymlcy.cn/imgs/help7.png" mode="widthFix" />
+  <image wx:if="{{photo=='8'}}" id="8" src="https://www.yymlcy.cn/imgs/help8.png" mode="widthFix" />
+</view>

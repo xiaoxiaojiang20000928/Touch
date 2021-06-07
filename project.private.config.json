@@ -13,8 +13,8 @@
     "miniprogram": {
       "list": [
         {
-          "name": "pages/detail/index",
-          "pathName": "pages/detail/index",
+          "name": "pages/tree/index",
+          "pathName": "pages/tree/index",
           "query": "",
           "scene": null
         },
@@ -33,6 +33,12 @@
         {
           "name": "pages/message/index",
           "pathName": "pages/message/index",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "pages/firsthelp/index",
+          "pathName": "pages/firsthelp/index",
           "query": "",
           "scene": null
         }
