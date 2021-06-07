@@ -7,11 +7,6 @@ Page({
   data: {
 
   },
-  handleReturn(){
-    wx.switchTab({
-      url: '/pages/mine/index',
-    })
-  },
 
   /**
    * 生命周期函数--监听页面加载

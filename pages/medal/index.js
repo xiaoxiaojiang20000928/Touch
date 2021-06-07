@@ -1,29 +1,41 @@
 // pages/medal/index.js
+import {sendAction} from '../util/index'
+var app = getApp()
 Page({
   data:{
-    xingdongpai:false,
-    nihaopengyou:false,
-    state:null
+    goal:null,
+    description:null,
+    title:null,
+    state:false
   },
-  handleClose(){
+  async onShow(){
+    const res = await sendAction("/badge/getBadges",{
+      openid:app.openid
+    },"POST")
+  },
+
+  handleClick(e){ //事件委托
+    if(e.target.id){
+    const {id} = e.target;
+    const {name} = e.target.dataset;
+    this.getMedal(id,name)
+    }
+
+  },
+
+  handleClickDetail(){ //控制勋章弹窗
     this.setData({
-      xingdongpai:false,
-      nihaopengyou:false
+      state:false
     })
   },
-  tanchuang1open(){
+
+  async getMedal(id,name){
+    const res = await sendAction("/badge/getBadgeAll",{badge:id},"GET");
     this.setData({
-      xingdongpai:true
-    })
-  },
-  tanchuang2open(){
-    this.setData({
-      nihaopengyou:true
-    })
-  },
-  handleReturn(){
-    wx.switchTab({
-      url: '/pages/day1/index',
+      goal:res.data.goal,
+      description:res.data.description,
+      title:name,
+      state:true
     })
   }
 })

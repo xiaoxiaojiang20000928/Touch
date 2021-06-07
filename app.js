@@ -1,17 +1,23 @@
 App({
-
+  openid:null,
+  day:null,
+  first:false, //判断是否为新用户
   /**
    * 当小程序初始化完成时，会触发 onLaunch（全局只触发一次）
    */
-  onLaunch: function () {
-    
+  onLaunch:function () {
+    wx.loadFontFace({
+      family: 'haibao',
+      source: 'url("https://1.116.141.149/imgs/girl.ttf")',
+      global:  true
+    })
   },
 
   /**
    * 当小程序启动，或从后台进入前台显示，会触发 onShow
    */
   onShow: function (options) {
-    
+
   },
 
   /**

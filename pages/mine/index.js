@@ -12,6 +12,8 @@ Page({
   },
 
   getUserInfo(res){
+    wx.setStorageSync('userName', res.detail.userInfo.nickName);
+    wx.setStorageSync('url', res.detail.userInfo.avatarUrl);
     this.setData({
       userInfo:{
         userName:res.detail.userInfo.nickName,
@@ -20,19 +22,38 @@ Page({
     })
   },
 
-  onLoad: function (options) {
-    wx.getUserInfo({
-      success:(res)=>{
+  handleClick(e){
+    if(e.target.id=="push"){
+      wx.navigateTo({
+        url: '/pages/message/index',
+      })
+    }
+    if(e.target.id=="help"){
+      wx.navigateTo({
+        url: '/pages/help/index',
+      })
+    }
+    if(e.target.id=="aboutus"){
+      wx.navigateTo({
+        url: '/pages/aboutus/index',
+      })
+    }
+  },
+
+  onShow: function (options) {
+    try{
+      const name = wx.getStorageSync('userName');
+      const url = wx.getStorageSync('url');
+      if(name){
         this.setData({
           userInfo:{
-            userName:res.userInfo.nickName,
-            url:res.userInfo.avatarUrl
+            userName:name,
+            url:url
           }
         })
-      },
-      fail:(err)=>{
-        console.log(err)
       }
-    })
+    }catch(err){
+      console.log(err);
+    }
   }
 })

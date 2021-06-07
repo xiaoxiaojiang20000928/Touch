@@ -13,20 +13,32 @@
     "miniprogram": {
       "list": [
         {
+          "name": "pages/tree/index",
+          "pathName": "pages/tree/index",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "pages/aboutus/index",
+          "pathName": "pages/aboutus/index",
+          "query": "",
+          "scene": null
+        },
+        {
           "name": "pages/medal/index",
           "pathName": "pages/medal/index",
           "query": "",
           "scene": null
         },
         {
-          "name": "pages/help/index",
-          "pathName": "pages/help/index",
+          "name": "pages/message/index",
+          "pathName": "pages/message/index",
           "query": "",
           "scene": null
         },
         {
-          "name": "pages/medal/index",
-          "pathName": "pages/medal/index",
+          "name": "pages/firsthelp/index",
+          "pathName": "pages/firsthelp/index",
           "query": "",
           "scene": null
         }

@@ -2,8 +2,4 @@
   <view class="content">
     <image src="../../static/Image/help/aboutus.png" mode="widthFix"/>
   </view>
-  <view class="content1">
-    <image bindtap="handleReturn" 
-    src="../../static/Image/xunzhang/返回.png" mode="widthFix"></image>
-  </view>
 </view>

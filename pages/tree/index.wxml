@@ -1,0 +1,50 @@
+<view class="container" bindtap="handleClick">
+
+  <!-- 记录界面 -->
+  <view class="container_postion">
+    <image wx:if="{{state==0}}" class="container_postion_1" id="push" src="../../static/Image/tree/push.png" mode="widthFix"/>
+    <image wx:if="{{state==1}}" src="../../static/Image/tree/return.png" mode="widthFix" class="container_postion_2" id="return"/>
+  </view>
+  <view wx:if="{{state==0}}" class="contentcontainer">
+    <view wx:if="{{List!==''}}" class="contentcontainer_item" wx:for="{{List}}" wx:key="flag">
+      <view class="contentcontainer_item_time">{{item.time}}</view>
+      <view class="contentcontainer_one">
+      <image class="contentcontainer_one_photo" src="{{item.expressionUrl}}" mode="widthFix" />
+      <view class="contentcontainer_one_text">{{item.text}}</view>  
+      <image class="contentcontainer_one_delete" id="delete" data-flag="{{item.flag}}" src="../../static/Image/tree/delete.png" mode="widthFix" />
+      </view>
+      <!-- <button type="warn" data-flag="{{item.flag}}" size="mini" id="delete">删除</button> -->
+    </view>
+    <view wx:if="{{List==''}}" style="width:80%;margin:0 auto 0 auto;">
+      树洞暂时没有记录哦，把你想写的话写在树洞里面吧~
+    </view>
+  </view>
+
+  <!-- 编辑界面 -->
+  <view wx:if="{{state==1}}" class="contentcontainer2">
+    <view>
+      <view class="contentcontainer2_item1">心情</view>
+      <view class="contentcontainer2_item2" catchtap="handleClickSelect"> 
+        <!-- 表情区,事件采用catchtap独立委托禁止内部组件向上冒泡 -->
+          <image class="{{selected=='3'?'cover':''}}" id="3" src="../../static/Image/tree/expression3.png" mode="widthFix"/>
+          <image class="{{selected=='5'?'cover':''}}" id="5" src="../../static/Image/tree/expression5.png" mode="widthFix"/>
+          <image class="{{selected=='8'?'cover':''}}" id="8" src="../../static/Image/tree/expression8.png" mode="widthFix"/>
+          <image class="{{selected=='9'?'cover':''}}" id="9" src="../../static/Image/tree/expression9.png" mode="widthFix"/>
+          <image class="{{selected=='1'?'cover':''}}" id="1" src="../../static/Image/tree/expression1.png" mode="widthFix"/>
+          <image class="{{selected=='2'?'cover':''}}" id="2" src="../../static/Image/tree/expression2.png" mode="widthFix"/>
+          <image class="{{selected=='7'?'cover':''}}" id="7" src="../../static/Image/tree/expression7.png" mode="widthFix"/>
+          <image class="{{selected=='6'?'cover':''}}" id="6" src="../../static/Image/tree/expression6.png" mode="widthFix"/>
+          <image class="{{selected=='4'?'cover':''}}" id="4" src="../../static/Image/tree/expression4.png" mode="widthFix"/>
+      </view>
+    </view>
+
+    <view>
+      <view class="contentcontainer2_item1">树语</view>
+      <view class="contentcontainer2_item3">
+        <textarea bindinput="handleChangeInput" value="{{input}}" placeholder="有什么想对树洞说的事情请写出来吧~"></textarea>
+      </view>
+    </view>
+
+    <image class="add" src="../../static/Image/tree/button.png" id="add" mode="widthFix"/>
+  </view>
+</view>

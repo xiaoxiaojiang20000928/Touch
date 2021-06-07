@@ -1,0 +1,9 @@
+<view class="container">
+<view class="contentcontainer">
+  <image src="{{imageURL}}" mode="widthFix"/>
+  <view class="contentcontainer_item">
+    <text>{{title}}</text>
+    <textarea class="text1">{{text}}</textarea>
+  </view>
+</view>
+</view>

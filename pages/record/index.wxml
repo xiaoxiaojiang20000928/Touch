@@ -1,34 +1,38 @@
-<!--pages/record/index.wxml-->
-<view class="backgroundimage">
-  <image src="../../static/Image/record/background.jpg"/>
-  <view class="day1">
-  <navigator url="/pages/day1/index" open-type="switchTab">
-  <image wx:if="{{!status1}}" src="../../static/Image/record/unfinish.png" mode="widthFix"/>
-  <image wx:else src="../../static/Image/record/已完成.png" mode="widthFix"/>
-  </navigator>
-  </view>
-  <view class="day2">
-    <navigator url="/pages/day2/index">
-    <image wx:if="{{!status2}}" src="../../static/Image/record/02.png" mode="widthFix"/>
-    <image wx:else src="../../static/Image/record/2.png" mode="widthFix"/>
-    </navigator>
-  </view>
-  <view class="day3">
-    <navigator url="/pages/day3/index">
-    <image wx:if="{{!status3}}" src="../../static/Image/record/03.png" mode="widthFix"/>
-    <image wx:else src="../../static/Image/record/3.png" mode="widthFix"/>
-   </navigator>
-  </view>
-  <view class="day4">
-    <navigator url="/pages/day4/index">
-    <image wx:if="{{!status4}}" src="../../static/Image/record/04.png" mode="widthFix"/>
-    <image wx:else src="../../static/Image/record/4.png" mode="widthFix"/>
-    </navigator>
-  </view>
-  <view class="day5">
-    <navigator url="/pages/day5/index">
-    <image wx:if="{{!status5}}" src="../../static/Image/record/05.png" mode="widthFix"/>
-    <image wx:else src="../../static/Image/record/5.png" mode="widthFix"/>
-    </navigator>
-  </view>
+<view class="container" bindtap="handleClick">
+<view class="contentcontainer">
+<view><image wx:if="{{day1}}" id="day1" class="day one" src="../../static/Image/record/finish1.png" mode="widthFix"/>
+<image wx:else class="day one" src="../../static/Image/record/unfinish.png" mode="widthFix"/></view>
+
+<view><image wx:if="{{day2}}" id="day2" class="day two" src="../../static/Image/record/finish2.png" mode="widthFix"/>
+<image wx:else class="day two" src="../../static/Image/record/unfinish.png" mode="widthFix"/>
+</view>
+
+<image wx:if="{{day3}}" id="day3" class="day three" src="../../static/Image/record/finish3.png" mode="widthFix"/>
+<image wx:else class="day three" src="../../static/Image/record/unfinish.png" mode="widthFix"/>
+
+<image wx:if="{{day4}}" id="day4" class="day four" src="../../static/Image/record/finish4.png" mode="widthFix"/>
+<image wx:else class="day four" src="../../static/Image/record/unfinish.png" mode="widthFix"/>
+
+<image wx:if="{{day5}}" id="day5" class="day five" src="../../static/Image/record/finish5.png" mode="widthFix"/>
+<image wx:else class="day five" src="../../static/Image/record/unfinish.png" mode="widthFix"/>
+
+<image wx:if="{{day6}}" id="day6" class="day six" src="../../static/Image/record/finish6.png" mode="widthFix"/>
+<image wx:else class="day six" src="../../static/Image/record/unfinish.png" mode="widthFix"/>
+
+<image wx:if="{{day7}}" id="day7" class="day seven" src="../../static/Image/record/finish7.png" mode="widthFix"/>
+<image wx:else class="day seven" src="../../static/Image/record/unfinish.png" mode="widthFix"/>
+
+<image wx:if="{{day8}}" id="day8" class="day eight" src="../../static/Image/record/finish8.png" mode="widthFix"/>
+<image wx:else class="day eight" src="../../static/Image/record/unfinish.png" mode="widthFix"/>
+
+<image wx:if="{{day9}}" id="day9" class="day nine" src="../../static/Image/record/finish9.png" mode="widthFix"/>
+<image wx:else class="day nine" src="../../static/Image/record/unfinish.png" mode="widthFix"/>
+
+<image wx:if="{{day10}}" id="day10" class="day ten" src="../../static/Image/record/finish10.png" mode="widthFix"/>
+<image wx:else class="day ten" src="../../static/Image/record/unfinish.png" mode="widthFix"/>
+
+<image wx:if="{{day3}}" class="rabbit" src="../../static/Image/record/rabbit.png" mode="widthFix" />
+<image wx:if="{{day6}}" class="bow" src="../../static/Image/record/bow.png" mode="widthFix" />
+<image wx:if="{{day9}}" class="skirt" src="../../static/Image/record/skirt.png" mode="widthFix" />
+</view>
 </view>
